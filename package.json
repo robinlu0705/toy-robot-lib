@@ -1,0 +1,14 @@
+{
+  "name": "toy-robot",
+  "version": "0.0.1",
+  "author": "Robin Lu",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/core -d dist/nodeCLI/lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
