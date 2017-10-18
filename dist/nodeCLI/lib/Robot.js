@@ -8,13 +8,17 @@ var _Robot$prototype;
 
 exports.default = Robot;
 
-var _placer = require('./methodCreators/placer');
+var _placer = require('./baseMethodCreators/placer');
 
 var _placer2 = _interopRequireDefault(_placer);
 
-var _reporter = require('./methodCreators/reporter');
+var _reporter = require('./baseMethodCreators/reporter');
 
 var _reporter2 = _interopRequireDefault(_reporter);
+
+var _mover = require('./baseMethodCreators/mover');
+
+var _mover2 = _interopRequireDefault(_mover);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,4 +33,4 @@ function Robot() {
   };
 }
 
-Robot.prototype = (_Robot$prototype = {}, _defineProperty(_Robot$prototype, _placer.METHOD_NAME, (0, _placer2.default)()), _defineProperty(_Robot$prototype, _reporter.METHOD_NAME, (0, _reporter2.default)()), _Robot$prototype);
+Robot.prototype = (_Robot$prototype = {}, _defineProperty(_Robot$prototype, _placer.METHOD_NAME, (0, _placer2.default)()), _defineProperty(_Robot$prototype, _reporter.METHOD_NAME, (0, _reporter2.default)()), _defineProperty(_Robot$prototype, _mover.METHOD_NAME, (0, _mover2.default)()), _Robot$prototype);

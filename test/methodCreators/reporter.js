@@ -5,11 +5,11 @@ import reporter from '/src/core/baseMethodCreators/reporter';
 describe('BASE METHOD #report', function() {
   const method = reporter();
 
-  before(function() {
+  beforeEach(function() {
     sinon.spy(console, 'log');
   });
 
-  after(function () {
+  afterEach(function () {
     console.log.restore();
   });
 
