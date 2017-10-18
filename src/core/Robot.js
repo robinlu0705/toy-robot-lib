@@ -1,5 +1,5 @@
-import placer, { METHOD_NAME as PLACER_METHOD_NAME, initialState as placerInitialState } from './methodCreators/placer';
-import reporter, { METHOD_NAME as REPORTER_METHOD_NAME, initialState as reporterInitialState } from './methodCreators/reporter';
+import placer, { METHOD_NAME as PLACER_METHOD_NAME } from './methodCreators/placer';
+import reporter, { METHOD_NAME as REPORTER_METHOD_NAME } from './methodCreators/reporter';
 
 export default function Robot() {
   this.state = {
