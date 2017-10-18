@@ -36,26 +36,43 @@ lineReader.on('line', function(line) {
           const y = Number(argsParseResult[2]);
           const f = argsParseResult[3];
 
-          robot.place({ x, y, f, table });
+          if (typeof robot.place === 'function') {
+            robot.place({ x, y, f, table });
+          }
         }
 
         break;
       }
 
       case 'MOVE': {
+        if (typeof robot.move === 'function') {
+          robot.move();
+        }
+
         break;
       }
 
       case 'LEFT': {
+        if (typeof robot.left === 'function') {
+          robot.left();
+        }
+
         break;
       }
 
       case 'RIGHT': {
+        if (typeof robot.right === 'function') {
+          robot.right();
+        }
+
         break;
       }
 
       case 'REPORT': {
-        robot.report();
+        if (typeof robot.report === 'function') {
+          robot.report();
+        }
+
         break;
       }
     }
