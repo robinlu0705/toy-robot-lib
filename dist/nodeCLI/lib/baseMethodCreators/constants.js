@@ -6,3 +6,4 @@ Object.defineProperty(exports, "__esModule", {
 var PLACE = exports.PLACE = 'place';
 var REPORT = exports.REPORT = 'report';
 var MOVE = exports.MOVE = 'move';
+var LEFT = exports.LEFT = 'left';
