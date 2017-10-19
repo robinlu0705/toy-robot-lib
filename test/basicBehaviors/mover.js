@@ -1,8 +1,9 @@
 import { expect } from 'chai';
 import { mover } from '/src/basicBehaviors';
+import { METHOD_KEY } from '/src/basicBehaviors/constants';
 
 describe('BASIC BEHAVIOR #move', function() {
-  const method = mover.behavior;
+  const method = mover[METHOD_KEY];
 
   it('should not move if it has not been place on table yet', function() {
     const context = {

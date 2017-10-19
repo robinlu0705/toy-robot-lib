@@ -1,4 +1,4 @@
-import { RIGHT as BEHAVIOR_NAME } from './constants';
+import { RIGHT, NAME_KEY, METHOD_KEY } from './constants';
 import Utils from './Utils';
 
 const rotationList = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
@@ -14,8 +14,8 @@ function newFacingCalc(f) {
 }
 
 export default {
-  BEHAVIOR_NAME,
-  behavior() {
+  [NAME_KEY]: RIGHT,
+  [METHOD_KEY]() {
     if (Utils.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
       // it has been placed on a table
       this.state = {

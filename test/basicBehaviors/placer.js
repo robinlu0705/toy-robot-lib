@@ -1,8 +1,9 @@
 import { expect } from 'chai';
 import { placer } from '/src/basicBehaviors';
+import { METHOD_KEY } from '/src/basicBehaviors/constants';
 
 describe('BASIC BEHAVIOR #place', function() {
-  const method = placer.behavior;
+  const method = placer[METHOD_KEY];
 
   it('should ignore insufficient arguments', function() {
     const context = {

@@ -1,9 +1,10 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { reporter } from '/src/basicBehaviors';
+import { METHOD_KEY } from '/src/basicBehaviors/constants';
 
 describe('BASIC BEHAVIOR #report', function() {
-  const method = reporter.behavior;
+  const method = reporter[METHOD_KEY];
 
   it('should do nothing if the robot has not been placed on a table yet', function() {
     const context = {

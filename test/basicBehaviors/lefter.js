@@ -1,8 +1,9 @@
 import { expect } from 'chai';
 import { lefter } from '/src/basicBehaviors';
+import { METHOD_KEY } from '/src/basicBehaviors/constants';
 
 describe('BASIC BEHAVIOR #left', function() {
-  const method = lefter.behavior;
+  const method = lefter[METHOD_KEY];
 
   it('should not turn if it has not been place on table yet', function() {
     const context = {

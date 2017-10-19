@@ -1,8 +1,9 @@
 import { expect } from 'chai';
 import { righter } from '/src/basicBehaviors';
+import { METHOD_KEY } from '/src/basicBehaviors/constants';
 
 describe('BASIC BEHAVIOR #right', function() {
-  const method = righter.behavior;
+  const method = righter[METHOD_KEY];
 
   it('should not turn if it has not been place on table yet', function() {
     const context = {

@@ -1,4 +1,4 @@
-import { placer, reporter, mover, lefter, righter } from '../basicBehaviors';
+import { assemble, placer, reporter, mover, lefter, righter } from '../basicBehaviors';
 
 export default function Robot() {
   this.state = {
@@ -10,10 +10,10 @@ export default function Robot() {
 }
 
 
-Robot.prototype = {
-  [placer.BEHAVIOR_NAME]: placer.behavior,
-  [reporter.BEHAVIOR_NAME]: reporter.behavior,
-  [mover.BEHAVIOR_NAME]: mover.behavior,
-  [lefter.BEHAVIOR_NAME]: lefter.behavior,
-  [righter.BEHAVIOR_NAME]: righter.behavior,
-};
+Robot.prototype = assemble(
+  placer,
+  reporter,
+  mover,
+  lefter,
+  righter,
+);
