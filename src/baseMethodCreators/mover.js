@@ -1,3 +1,4 @@
+import { MOVE as BEHAVIOR_NAME } from './constants';
 import Utils from './Utils';
 
 function newPosCalc(x, y, f) {
@@ -36,9 +37,9 @@ function newPosCalc(x, y, f) {
   }
 }
 
-export { MOVE as METHOD_NAME } from './constants';
-export default function () {
-  return function move() {
+export default {
+  BEHAVIOR_NAME,
+  behavior() {
     if (Utils.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
       // it has been placed on a table
       const newPos = newPosCalc(this.state.x, this.state.y, this.state.f);
@@ -52,5 +53,5 @@ export default function () {
         };
       }
     }
-  };
-}
+  },
+};

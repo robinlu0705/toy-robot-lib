@@ -3,35 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.METHOD_NAME = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _constants = require('./constants');
-
-Object.defineProperty(exports, 'METHOD_NAME', {
-  enumerable: true,
-  get: function get() {
-    return _constants.MOVE;
-  }
-});
-
-exports.default = function () {
-  return function move() {
-    if (_Utils2.default.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
-      // it has been placed on a table
-      var newPos = newPosCalc(this.state.x, this.state.y, this.state.f);
-
-      if (_Utils2.default.checkInside(newPos.x, newPos.y, this.state.tableSize)) {
-        // new position is still in the table
-        this.state = _extends({}, this.state, {
-          x: newPos.x,
-          y: newPos.y
-        });
-      }
-    }
-  };
-};
 
 var _Utils = require('./Utils');
 
@@ -79,3 +54,21 @@ function newPosCalc(x, y, f) {
       }
   }
 }
+
+exports.default = {
+  BEHAVIOR_NAME: _constants.MOVE,
+  behavior: function behavior() {
+    if (_Utils2.default.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
+      // it has been placed on a table
+      var newPos = newPosCalc(this.state.x, this.state.y, this.state.f);
+
+      if (_Utils2.default.checkInside(newPos.x, newPos.y, this.state.tableSize)) {
+        // new position is still in the table
+        this.state = _extends({}, this.state, {
+          x: newPos.x,
+          y: newPos.y
+        });
+      }
+    }
+  }
+};

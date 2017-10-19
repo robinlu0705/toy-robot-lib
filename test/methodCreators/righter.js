@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import righter from '/src/baseMethodCreators/righter';
+import { righter } from '/src/baseMethodCreators';
 
-describe('BASE METHOD #right', function() {
-  const method = righter();
+describe('BASIC BEHAVIOR #right', function() {
+  const method = righter.behavior;
 
   it('should not turn if it has not been place on table yet', function() {
     const context = {

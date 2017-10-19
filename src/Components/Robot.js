@@ -1,8 +1,4 @@
-import placer, { METHOD_NAME as PLACER_METHOD_NAME } from '../baseMethodCreators/placer';
-import reporter, { METHOD_NAME as REPORTER_METHOD_NAME } from '../baseMethodCreators/reporter';
-import mover, { METHOD_NAME as MOVER_METHOD_NAME } from '../baseMethodCreators/mover';
-import lefter, { METHOD_NAME as LEFTER_METHOD_NAME } from '../baseMethodCreators/lefter';
-import righter, { METHOD_NAME as RIGHTER_METHOD_NAME } from '../baseMethodCreators/righter';
+import { placer, reporter, mover, lefter, righter } from '../baseMethodCreators';
 
 export default function Robot() {
   this.state = {
@@ -15,9 +11,9 @@ export default function Robot() {
 
 
 Robot.prototype = {
-  [PLACER_METHOD_NAME]: placer(),
-  [REPORTER_METHOD_NAME]: reporter(),
-  [MOVER_METHOD_NAME]: mover(),
-  [LEFTER_METHOD_NAME]: lefter(),
-  [RIGHTER_METHOD_NAME]: righter(),
+  [placer.BEHAVIOR_NAME]: placer.behavior,
+  [reporter.BEHAVIOR_NAME]: reporter.behavior,
+  [mover.BEHAVIOR_NAME]: mover.behavior,
+  [lefter.BEHAVIOR_NAME]: lefter.behavior,
+  [righter.BEHAVIOR_NAME]: righter.behavior,
 };

@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import reporter from '/src/baseMethodCreators/reporter';
+import { reporter } from '/src/baseMethodCreators';
 
-describe('BASE METHOD #report', function() {
-  const method = reporter();
+describe('BASIC BEHAVIOR #report', function() {
+  const method = reporter.behavior;
 
   it('should do nothing if the robot has not been placed on a table yet', function() {
     const context = {

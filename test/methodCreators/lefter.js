@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import lefter from '/src/baseMethodCreators/lefter';
+import { lefter } from '/src/baseMethodCreators';
 
-describe('BASE METHOD #left', function() {
-  const method = lefter();
+describe('BASIC BEHAVIOR #left', function() {
+  const method = lefter.behavior;
 
   it('should not turn if it has not been place on table yet', function() {
     const context = {

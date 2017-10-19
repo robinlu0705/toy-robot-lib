@@ -1,3 +1,4 @@
+import { PLACE as BEHAVIOR_NAME } from './constants';
 import Utils from './Utils';
 
 const validFacing = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
@@ -19,9 +20,9 @@ function checkProps(props) {
   return true;
 }
 
-export { PLACE as METHOD_NAME } from './constants';
-export default function () {
-  return function place(props) {
+export default {
+  BEHAVIOR_NAME,
+  behavior(props) {
     if (checkProps(props) && Utils.checkInside(props.x, props.y, props.table.size)) {
       this.state = {
         ...this.state,
@@ -31,5 +32,5 @@ export default function () {
         tableSize: props.table.size,
       };
     }
-  };
-}
+  },
+};

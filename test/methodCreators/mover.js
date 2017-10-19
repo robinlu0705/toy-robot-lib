@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import mover from '/src/baseMethodCreators/mover';
+import { mover } from '/src/baseMethodCreators';
 
-describe('BASE METHOD #move', function() {
-  const method = mover();
+describe('BASIC BEHAVIOR #move', function() {
+  const method = mover.behavior;
 
   it('should not move if it has not been place on table yet', function() {
     const context = {

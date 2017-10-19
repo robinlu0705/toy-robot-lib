@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import placer from '/src/baseMethodCreators/placer';
+import { placer } from '/src/baseMethodCreators';
 
-describe('BASE METHOD #place', function() {
-  const method = placer();
+describe('BASIC BEHAVIOR #place', function() {
+  const method = placer.behavior;
 
   it('should ignore insufficient arguments', function() {
     const context = {
