@@ -1,16 +1,9 @@
-import { assemble, placer, reporter, mover, lefter, righter } from '../basicBehaviors';
+import BaseRobot from './BaseRobot';
+import { placer, reporter, mover, lefter, righter } from '../basicBehaviors';
 
-export default function Robot() {
-  this.state = {
-    x: null,
-    y: null,
-    f: null,
-    tableSize: null,
-  };
-}
+export default class Robot extends BaseRobot {}
 
-
-Robot.prototype = assemble(
+Robot.prototype.assemble(
   placer,
   reporter,
   mover,

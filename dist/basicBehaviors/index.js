@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.assemble = exports.righter = exports.lefter = exports.mover = exports.reporter = exports.placer = undefined;
 
 var _placer = require('./placer');
 
@@ -50,11 +49,4 @@ Object.defineProperty(exports, 'righter', {
   }
 });
 
-var _Utils = require('./Utils');
-
-var _Utils2 = _interopRequireDefault(_Utils);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var assemble = _Utils2.default.assemble;
-exports.assemble = assemble;

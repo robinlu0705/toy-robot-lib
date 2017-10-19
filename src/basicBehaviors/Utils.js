@@ -1,5 +1,3 @@
-import { NAME_KEY, METHOD_KEY } from './constants';
-
 export default {
   checkInside(x, y, size) {
     if (!Number.isInteger(x)
@@ -14,18 +12,5 @@ export default {
     }
 
     return true;
-  },
-
-  assemble(...args) {
-    return args.reduce((comp, arg) => {
-      if (arg[NAME_KEY] && typeof arg[METHOD_KEY] === 'function') {
-        return {
-          ...comp,
-          [arg[NAME_KEY]]: arg[METHOD_KEY],
-        };
-      }
-
-      return comp;
-    }, {});
   },
 };

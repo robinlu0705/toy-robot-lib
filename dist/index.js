@@ -67,4 +67,13 @@ Object.defineProperty(exports, 'Robot', {
   }
 });
 
+var _BaseRobot = require('./Components/BaseRobot');
+
+Object.defineProperty(exports, 'BaseRobot', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_BaseRobot).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
