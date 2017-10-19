@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha --require babel-register 'test/**/*.js'",
     "lint": "eslint --ext .js ./src",
-    "build": "babel src/core -d dist/nodeCLI/lib"
+    "build": "babel src/core -d dist/nodeCLI/lib",
+    "publish": "npm run lint && npm test && npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
