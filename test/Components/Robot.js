@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Robot from '/src/core/Robot';
+import Robot from '/src/Components/Robot';
 
 describe('Robot', function() {
   it('should be created with a default state', function() {

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import reporter from '/src/core/baseMethodCreators/reporter';
+import reporter from '/src/baseMethodCreators/reporter';
 
 describe('BASE METHOD #report', function() {
   const method = reporter();

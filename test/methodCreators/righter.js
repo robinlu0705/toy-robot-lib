@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import righter from '/src/core/baseMethodCreators/righter';
+import righter from '/src/baseMethodCreators/righter';
 
 describe('BASE METHOD #right', function() {
   const method = righter();

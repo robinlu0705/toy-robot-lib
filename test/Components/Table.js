@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Table from '/src/core/Table';
+import Table from '/src/Components/Table';
 
 describe('Table', function() {
   it('should be created with a default size 5', function() {

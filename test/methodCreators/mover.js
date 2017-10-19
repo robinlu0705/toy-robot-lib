@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import mover from '/src/core/baseMethodCreators/mover';
+import mover from '/src/baseMethodCreators/mover';
 
 describe('BASE METHOD #move', function() {
   const method = mover();

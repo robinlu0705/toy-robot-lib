@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import placer from '/src/core/baseMethodCreators/placer';
+import placer from '/src/baseMethodCreators/placer';
 
 describe('BASE METHOD #place', function() {
   const method = placer();

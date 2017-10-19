@@ -8,23 +8,23 @@ var _Robot$prototype;
 
 exports.default = Robot;
 
-var _placer = require('./baseMethodCreators/placer');
+var _placer = require('../baseMethodCreators/placer');
 
 var _placer2 = _interopRequireDefault(_placer);
 
-var _reporter = require('./baseMethodCreators/reporter');
+var _reporter = require('../baseMethodCreators/reporter');
 
 var _reporter2 = _interopRequireDefault(_reporter);
 
-var _mover = require('./baseMethodCreators/mover');
+var _mover = require('../baseMethodCreators/mover');
 
 var _mover2 = _interopRequireDefault(_mover);
 
-var _lefter = require('./baseMethodCreators/lefter');
+var _lefter = require('../baseMethodCreators/lefter');
 
 var _lefter2 = _interopRequireDefault(_lefter);
 
-var _righter = require('./baseMethodCreators/righter');
+var _righter = require('../baseMethodCreators/righter');
 
 var _righter2 = _interopRequireDefault(_righter);
 

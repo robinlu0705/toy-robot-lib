@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import lefter from '/src/core/baseMethodCreators/lefter';
+import lefter from '/src/baseMethodCreators/lefter';
 
 describe('BASE METHOD #left', function() {
   const method = lefter();
