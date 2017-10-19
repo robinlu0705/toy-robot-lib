@@ -1,4 +1,4 @@
-import { placer, reporter, mover, lefter, righter } from '../baseMethodCreators';
+import { placer, reporter, mover, lefter, righter } from '../basicBehaviors';
 
 export default function Robot() {
   this.state = {

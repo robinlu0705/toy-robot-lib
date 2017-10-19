@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import { lefter } from '/src/baseMethodCreators';
+import { righter } from '/src/basicBehaviors';
 
-describe('BASIC BEHAVIOR #left', function() {
-  const method = lefter.behavior;
+describe('BASIC BEHAVIOR #right', function() {
+  const method = righter.behavior;
 
   it('should not turn if it has not been place on table yet', function() {
     const context = {
@@ -20,7 +20,7 @@ describe('BASIC BEHAVIOR #left', function() {
     expect(context.state).to.equal(originalState);
   });
 
-  it('should turn to (2,2,WEST) from (2,2,NORTH) on a 5x5 table', function() {
+  it('should turn to (2,2,EAST) from (2,2,NORTH) on a 5x5 table', function() {
     const context = {
       state: {
         x: 2,
@@ -36,16 +36,16 @@ describe('BASIC BEHAVIOR #left', function() {
     expect(context.state).to.not.equal(originalState);
     expect(context.state.x).to.equal(2);
     expect(context.state.y).to.equal(2);
-    expect(context.state.f).to.equal('WEST');
+    expect(context.state.f).to.equal('EAST');
     expect(context.state.tableSize).to.equal(5);
   });
 
-  it('should turn to (2,2,SOUTH) from (2,2,WEST) on a 5x5 table', function() {
+  it('should turn to (2,2,SOUTH) from (2,2,EAST) on a 5x5 table', function() {
     const context = {
       state: {
         x: 2,
         y: 2,
-        f: 'WEST',
+        f: 'EAST',
         tableSize: 5,
       },
     };
@@ -60,7 +60,7 @@ describe('BASIC BEHAVIOR #left', function() {
     expect(context.state.tableSize).to.equal(5);
   });
 
-  it('should turn to (2,2,EAST) from (2,2,SOUTH) on a 5x5 table', function() {
+  it('should turn to (2,2,WEST) from (2,2,SOUTH) on a 5x5 table', function() {
     const context = {
       state: {
         x: 2,
@@ -76,16 +76,16 @@ describe('BASIC BEHAVIOR #left', function() {
     expect(context.state).to.not.equal(originalState);
     expect(context.state.x).to.equal(2);
     expect(context.state.y).to.equal(2);
-    expect(context.state.f).to.equal('EAST');
+    expect(context.state.f).to.equal('WEST');
     expect(context.state.tableSize).to.equal(5);
   });
 
-  it('should turn to (2,2,NORTH) from (2,2,EAST) on a 5x5 table', function() {
+  it('should turn to (2,2,NORTH) from (2,2,WEST) on a 5x5 table', function() {
     const context = {
       state: {
         x: 2,
         y: 2,
-        f: 'EAST',
+        f: 'WEST',
         tableSize: 5,
       },
     };

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import { reporter } from '/src/baseMethodCreators';
+import { reporter } from '/src/basicBehaviors';
 
 describe('BASIC BEHAVIOR #report', function() {
   const method = reporter.behavior;

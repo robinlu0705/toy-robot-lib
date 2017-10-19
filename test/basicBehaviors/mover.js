@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { mover } from '/src/baseMethodCreators';
+import { mover } from '/src/basicBehaviors';
 
 describe('BASIC BEHAVIOR #move', function() {
   const method = mover.behavior;

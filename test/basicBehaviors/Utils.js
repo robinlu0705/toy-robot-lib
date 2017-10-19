@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Utils from '/src/baseMethodCreators/Utils';
+import Utils from '/src/basicBehaviors/Utils';
 
 describe('Util function #checkInside', function() {
   const method = Utils.checkInside;

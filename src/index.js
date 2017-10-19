@@ -1,7 +1,7 @@
-export { default as placer } from './baseMethodCreators/placer';
-export { default as reporter } from './baseMethodCreators/reporter';
-export { default as mover } from './baseMethodCreators/mover';
-export { default as lefter } from './baseMethodCreators/lefter';
-export { default as righter } from './baseMethodCreators/righter';
+export { default as placer } from './basicBehaviors/placer';
+export { default as reporter } from './basicBehaviors/reporter';
+export { default as mover } from './basicBehaviors/mover';
+export { default as lefter } from './basicBehaviors/lefter';
+export { default as righter } from './basicBehaviors/righter';
 export { default as Table } from './Components/Table';
 export { default as Robot } from './Components/Robot';

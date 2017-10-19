@@ -8,7 +8,7 @@ var _Robot$prototype;
 
 exports.default = Robot;
 
-var _baseMethodCreators = require('../baseMethodCreators');
+var _basicBehaviors = require('../basicBehaviors');
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -21,4 +21,4 @@ function Robot() {
   };
 }
 
-Robot.prototype = (_Robot$prototype = {}, _defineProperty(_Robot$prototype, _baseMethodCreators.placer.BEHAVIOR_NAME, _baseMethodCreators.placer.behavior), _defineProperty(_Robot$prototype, _baseMethodCreators.reporter.BEHAVIOR_NAME, _baseMethodCreators.reporter.behavior), _defineProperty(_Robot$prototype, _baseMethodCreators.mover.BEHAVIOR_NAME, _baseMethodCreators.mover.behavior), _defineProperty(_Robot$prototype, _baseMethodCreators.lefter.BEHAVIOR_NAME, _baseMethodCreators.lefter.behavior), _defineProperty(_Robot$prototype, _baseMethodCreators.righter.BEHAVIOR_NAME, _baseMethodCreators.righter.behavior), _Robot$prototype);
+Robot.prototype = (_Robot$prototype = {}, _defineProperty(_Robot$prototype, _basicBehaviors.placer.BEHAVIOR_NAME, _basicBehaviors.placer.behavior), _defineProperty(_Robot$prototype, _basicBehaviors.reporter.BEHAVIOR_NAME, _basicBehaviors.reporter.behavior), _defineProperty(_Robot$prototype, _basicBehaviors.mover.BEHAVIOR_NAME, _basicBehaviors.mover.behavior), _defineProperty(_Robot$prototype, _basicBehaviors.lefter.BEHAVIOR_NAME, _basicBehaviors.lefter.behavior), _defineProperty(_Robot$prototype, _basicBehaviors.righter.BEHAVIOR_NAME, _basicBehaviors.righter.behavior), _Robot$prototype);

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { placer } from '/src/baseMethodCreators';
+import { placer } from '/src/basicBehaviors';
 
 describe('BASIC BEHAVIOR #place', function() {
   const method = placer.behavior;

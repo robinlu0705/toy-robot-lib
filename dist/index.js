@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _placer = require('./baseMethodCreators/placer');
+var _placer = require('./basicBehaviors/placer');
 
 Object.defineProperty(exports, 'placer', {
   enumerable: true,
@@ -13,7 +13,7 @@ Object.defineProperty(exports, 'placer', {
   }
 });
 
-var _reporter = require('./baseMethodCreators/reporter');
+var _reporter = require('./basicBehaviors/reporter');
 
 Object.defineProperty(exports, 'reporter', {
   enumerable: true,
@@ -22,7 +22,7 @@ Object.defineProperty(exports, 'reporter', {
   }
 });
 
-var _mover = require('./baseMethodCreators/mover');
+var _mover = require('./basicBehaviors/mover');
 
 Object.defineProperty(exports, 'mover', {
   enumerable: true,
@@ -31,7 +31,7 @@ Object.defineProperty(exports, 'mover', {
   }
 });
 
-var _lefter = require('./baseMethodCreators/lefter');
+var _lefter = require('./basicBehaviors/lefter');
 
 Object.defineProperty(exports, 'lefter', {
   enumerable: true,
@@ -40,7 +40,7 @@ Object.defineProperty(exports, 'lefter', {
   }
 });
 
-var _righter = require('./baseMethodCreators/righter');
+var _righter = require('./basicBehaviors/righter');
 
 Object.defineProperty(exports, 'righter', {
   enumerable: true,
