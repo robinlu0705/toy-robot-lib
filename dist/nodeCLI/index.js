@@ -19,6 +19,13 @@ let lineNo = 0;
 
 lineReader.on('line', function(line) {
   ++lineNo;
+
+  line = line.trim();
+
+  if (!line.length || /^#/.test(line)) {
+    return;
+  }
+
   const parseResult = /^(PLACE|MOVE|LEFT|RIGHT|REPORT)(.*)$/.exec(line);
 
   if (!parseResult) {
