@@ -1,6 +1,6 @@
 import Utils from './Utils';
 
-const validFacing = [ 'NORTH', 'EAST', 'SOUTH', 'WEST' ];
+const validFacing = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
 
 function checkProps(props) {
   if (!props
@@ -14,14 +14,14 @@ function checkProps(props) {
     || props.table.size <= 0
   ) {
     return false;
-  } else {
-    return true;
   }
+
+  return true;
 }
 
 export { PLACE as METHOD_NAME } from './constants';
-export default function() {
-  return function(props)  {
+export default function () {
+  return function place(props) {
     if (checkProps(props) && Utils.checkInside(props.x, props.y, props.table.size)) {
       this.state = {
         ...this.state,

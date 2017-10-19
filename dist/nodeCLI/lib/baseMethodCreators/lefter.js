@@ -17,7 +17,7 @@ Object.defineProperty(exports, 'METHOD_NAME', {
 });
 
 exports.default = function () {
-  return function () {
+  return function left() {
     if (_Utils2.default.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
       // it has been placed on a table
       this.state = _extends({}, this.state, {
@@ -33,12 +33,14 @@ var _Utils2 = _interopRequireDefault(_Utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var rotationList = ['NORTH', 'WEST', 'SOUTH', 'EAST'];
+
 function newFacingCalc(f) {
   var idx = rotationList.indexOf(f);
   if (idx !== -1) {
     var newIdx = (idx + 1) % rotationList.length;
     return rotationList[newIdx];
   }
-}
 
-var rotationList = ['NORTH', 'WEST', 'SOUTH', 'EAST'];
+  return f;
+}

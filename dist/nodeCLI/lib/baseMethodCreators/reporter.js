@@ -15,7 +15,7 @@ Object.defineProperty(exports, 'METHOD_NAME', {
 });
 
 exports.default = function () {
-  return function () {
+  return function report() {
     if (_Utils2.default.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
       console.log('Output: ' + this.state.x + ', ' + this.state.y + ', ' + this.state.f);
     }

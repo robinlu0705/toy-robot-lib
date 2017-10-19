@@ -9,8 +9,8 @@ export default {
       || y >= size
     ) {
       return false;
-    } else {
-      return true;
     }
-  }
-}
+
+    return true;
+  },
+};

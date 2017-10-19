@@ -17,7 +17,7 @@ Object.defineProperty(exports, 'METHOD_NAME', {
 });
 
 exports.default = function () {
-  return function (props) {
+  return function place(props) {
     if (checkProps(props) && _Utils2.default.checkInside(props.x, props.y, props.table.size)) {
       this.state = _extends({}, this.state, {
         x: props.x,
@@ -40,7 +40,7 @@ var validFacing = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
 function checkProps(props) {
   if (!props || !Number.isInteger(props.x) || props.x < 0 || !Number.isInteger(props.y) || props.y < 0 || validFacing.indexOf(props.f) === -1 || !props.table || !Number.isInteger(props.table.size) || props.table.size <= 0) {
     return false;
-  } else {
-    return true;
   }
+
+  return true;
 }

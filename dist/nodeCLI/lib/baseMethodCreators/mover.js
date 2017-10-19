@@ -17,7 +17,7 @@ Object.defineProperty(exports, 'METHOD_NAME', {
 });
 
 exports.default = function () {
-  return function () {
+  return function move() {
     if (_Utils2.default.checkInside(this.state.x, this.state.y, this.state.tableSize)) {
       // it has been placed on a table
       var newPos = newPosCalc(this.state.x, this.state.y, this.state.f);
@@ -47,8 +47,6 @@ function newPosCalc(x, y, f) {
           x: x,
           y: y + 1
         };
-
-        break;
       }
 
     case 'EAST':
@@ -57,8 +55,6 @@ function newPosCalc(x, y, f) {
           x: x + 1,
           y: y
         };
-
-        break;
       }
 
     case 'SOUTH':
@@ -67,8 +63,6 @@ function newPosCalc(x, y, f) {
           x: x,
           y: y - 1
         };
-
-        break;
       }
 
     case 'WEST':
@@ -77,8 +71,11 @@ function newPosCalc(x, y, f) {
           x: x - 1,
           y: y
         };
+      }
 
-        break;
+    default:
+      {
+        return { x: x, y: y, f: f };
       }
   }
 }
