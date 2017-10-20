@@ -1,6 +1,6 @@
 # Toy Robot Lib
 
-Toy Robot Lib is a JavaScript library provides the core functions of the robot described in [Toy Robot Simulator](#Toy-Robot-Simulator).
+Toy Robot Lib is a JavaScript library provides the core functions of the robot described in [Toy Robot Simulator](#toy-robot-simulator).
 
 You can use our pre-defined Robot API to generate robots with the default behaviors. Or you can create your own robots by assembling the basic-behaviors we provide.
 
@@ -17,7 +17,7 @@ that would result in the robot falling from the table must be prevented,
 however further valid movement commands must s8ll
 be allowed.
 
-> NOTE: Implementations of Toy Robot Simulator can be found in our [examples](Examples).
+> NOTE: Implementations of Toy Robot Simulator can be found in our [examples](examples).
 
 ## Getting Started
 
