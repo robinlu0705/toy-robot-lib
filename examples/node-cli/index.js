@@ -1,3 +1,4 @@
+const fs = require('fs');
 const readline = require('readline');
 
 const Table = require('./lib').Table;
@@ -10,7 +11,6 @@ const cleanCommandArgString = require('./functions').cleanCommandArgString;
 const parsePlaceCommandArgs = require('./functions').parsePlaceCommandArgs;
 const operate = require('./functions').operate;
 
-const TEST_FILE = __dirname + '/test1.txt';
 const commandSet = {
   PLACE: 'PLACE',
   REPORT: 'REPORT',
@@ -19,11 +19,22 @@ const commandSet = {
   RIGHT: 'RIGHT',
 };
 
+const testFile = process.argv[2];
+if (!testFile) {
+  console.error('Not enough arguments, please provide a test file');
+  process.exit();
+}
+
+if (!fs.existsSync(testFile) || !fs.lstatSync(testFile).isFile()) {
+  console.error('File not exist');
+  process.exit();
+}
+
 const table = new Table(5);
 const robot = new Robot();
 
 const lineReader = readline.createInterface({
-  input: require('fs').createReadStream(TEST_FILE),
+  input: require('fs').createReadStream(testFile),
 });
 
 let lineNo = 0;
