@@ -119,7 +119,7 @@ const upsDriver = new UPSDriver();
 
 ### Examples
 
-* [node cli](./examples/nodeCLI) - a command line interface implementation of Toy Robot Simulator
+* [node-cli](./examples/node-cli) - a command line interface implementation of Toy Robot Simulator
 
 ## Running The Tests
 
