@@ -1,6 +1,8 @@
 # Example - Node CLI
 
-This example demonstrates how to use the Toy Robot library to create a command line interface of Toy Robot Simulator.
+This example is an implementation of Toy Robot Simulator.
+
+It demonstrates how to use the Toy Robot Lib to implement a command line interface of Toy Robot Simulator.
 
 ## Getting Started
 
@@ -19,7 +21,7 @@ v6.11.4
 
 ### Installing
 
-You'll need the Toy Robot library in `lib/` folder.
+You'll need the Toy Robot Lib in `lib/` folder.
 
 Copy the pre-built files to `lib/`
 ```sh
@@ -34,7 +36,7 @@ Run the script `index.js`:
 $ node index.js
 ```
 
-The process will start and read the commands from `test1.txt` file. The robot on a 5x5 table will be operated and output the result when command `REPORT` is called.
+The process will start and read the commands from `test1.txt` file. A robot on a 5x5 table will be operated and output the result when command `REPORT` is called.
 
 
 ### Available Commands

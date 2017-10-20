@@ -1,12 +1,12 @@
-# Toy Robot
+# Toy Robot Lib
 
-Toy Robot is a JavaScript library implements the [Toy Robot Simulator](#Toy-Robot-Simulator-Rules).
+Toy Robot Lib is a JavaScript library provides the core functions of the robot described in [Toy Robot Simulator](#Toy-Robot-Simulator).
 
-You can use our pre-defined Robot API to generate robots with the default behaviors. Or you can assemble the basic-behaviors we provided to create your own robots.
+You can use our pre-defined Robot API to generate robots with the default behaviors. Or you can create your own robots by assembling the basic-behaviors we provide.
 
 Enjoy and get creative!
 
-## Toy Robot Simulator Rules
+## Toy Robot Simulator
 
 * The application is a simulation of a toy robot moving on a square tabletop, of
 dimensions 5 units x 5 units.
@@ -16,6 +16,8 @@ prevented from falling to destruction. Any movement
 that would result in the robot falling from the table must be prevented,
 however further valid movement commands must s8ll
 be allowed.
+
+> NOTE: Implementations of Toy Robot Simulator can be found in our [examples](Examples).
 
 ## Getting Started
 
@@ -93,9 +95,9 @@ robot.report();
 
 ### Advanced
 
-If you are not happy with the default Robot constructor, we've provide some basic-behaviors to help you assemble your own robot constructor.
+If you are not happy with the default Robot constructor, we've provide some basic-behavior helpers to help you assemble your own robot constructor.
 
-Creating a robot who do not turn left:
+Create a robot who **does not** turn left:
 
 ```javascript
 const BaseRobot = require('./lib').BaseRobot;
@@ -109,13 +111,15 @@ UPSDriver.prototype.assemble(
   mover,
   righter
 );
+
+const upsDriver = new UPSDriver();
 ```
 
-`BaseRobot` is a base constructor helps you initialize your robot's state. `placer`, `reporter`, `mover`, `lefter` and `righter` are basic behavior helpers we provided. You can use any combination of the helpers to assemble your robot.
+`BaseRobot` is a base constructor helps you initialize your robot's state. `placer`, `reporter`, `mover`, `lefter` and `righter` are basic behavior helpers. You can use any combination of the helpers to assemble your robot constructor.
 
 ### Examples
 
-* [node cli](./examples/nodeCLI) - reads the commands from a test file and operates the default robot on a 5x5 table accordingly
+* [node cli](./examples/nodeCLI) - a command line interface implementation of Toy Robot Simulator
 
 ## Running The Tests
 
