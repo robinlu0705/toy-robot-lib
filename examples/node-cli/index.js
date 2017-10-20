@@ -1,18 +1,29 @@
-function unrecognizedTestFileCommandPrompt(file, lineNo) {
-  console.error('Unrecognized command: ' + file + ':' + lineNo);
-  process.exit();
-}
+const readline = require('readline');
 
 const Table = require('./lib').Table;
 const Robot = require('./lib').Robot;
 
+const unrecognizedTestFileCommandPrompt = require('./functions').unrecognizedTestFileCommandPrompt;
+const checkComment = require('./functions').checkComment;
+const parseLine = require('./functions').parseLine;
+const cleanCommandArgString = require('./functions').cleanCommandArgString;
+const parsePlaceCommandArgs = require('./functions').parsePlaceCommandArgs;
+const operate = require('./functions').operate;
+
+const TEST_FILE = __dirname + '/test1.txt';
+const commandSet = {
+  PLACE: 'PLACE',
+  REPORT: 'REPORT',
+  MOVE: 'MOVE',
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT',
+};
+
 const table = new Table(5);
 const robot = new Robot();
 
-const testFile = __dirname + '/test1.txt';
-
-const lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream(testFile),
+const lineReader = readline.createInterface({
+  input: require('fs').createReadStream(TEST_FILE),
 });
 
 let lineNo = 0;
@@ -22,66 +33,28 @@ lineReader.on('line', function(line) {
 
   line = line.trim();
 
-  if (!line.length || /^#/.test(line)) {
+  if (!line.length || checkComment(line)) {
     return;
   }
 
-  const parseResult = /^(PLACE|MOVE|LEFT|RIGHT|REPORT)(.*)$/.exec(line);
+  const parseResult = parseLine(commandSet, line);
 
-  if (!parseResult) {
+  if (!parseResult.length) {
     unrecognizedTestFileCommandPrompt(testFile, lineNo);
   } else {
-    switch(parseResult[1]) {
-      case 'PLACE': {
-        const args = parseResult[2].replace(/\s+/gm, '');
-        const argsParseResult = /^(\d+),(\d+),(EAST|SOUTH|WEST|NORTH)$/.exec(args);
+    const command = parseResult[0];
+    const argString = parseResult[1];
 
-        if (!argsParseResult) {
-          unrecognizedTestFileCommandPrompt(testFile, lineNo);
-        } else {
-          const x = Number(argsParseResult[1]);
-          const y = Number(argsParseResult[2]);
-          const f = argsParseResult[3];
+    if (command === commandSet.PLACE) {
+      const args = parsePlaceCommandArgs(argString);
 
-          if (typeof robot.place === 'function') {
-            robot.place({ x, y, f, table });
-          }
-        }
-
-        break;
+      if (!args) {
+        unrecognizedTestFileCommandPrompt(testFile, lineNo);
+      } else {
+        operate(robot, command, { x: args.x, y: args.y, f: args.f, table });
       }
-
-      case 'MOVE': {
-        if (typeof robot.move === 'function') {
-          robot.move();
-        }
-
-        break;
-      }
-
-      case 'LEFT': {
-        if (typeof robot.left === 'function') {
-          robot.left();
-        }
-
-        break;
-      }
-
-      case 'RIGHT': {
-        if (typeof robot.right === 'function') {
-          robot.right();
-        }
-
-        break;
-      }
-
-      case 'REPORT': {
-        if (typeof robot.report === 'function') {
-          robot.report();
-        }
-
-        break;
-      }
+    } else {
+      operate(robot, command);
     }
   }
 });
