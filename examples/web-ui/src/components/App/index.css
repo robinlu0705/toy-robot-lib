@@ -23,7 +23,14 @@
   color: #4C4C4C;
   position: relative;
   display: inline-block;
-  margin: 20px 0 30px;
+  margin: 0 0 10px;
+}
+
+.App-hint {
+  margin: 20px 0;
+  color: #878787;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .App-board {

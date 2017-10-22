@@ -1,6 +1,7 @@
 .Table {
   background-color: white;
   user-select: none;
+  margin: 0 auto;
 }
 
 .Table-cell {

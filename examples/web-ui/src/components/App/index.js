@@ -30,7 +30,7 @@ function getRotation(facing) {
 
 function getGoodSize(origSize) {
   if (origSize <= 414) {
-    return origSize - 10;
+    return origSize - 40;
   } else {
     return 400;
   }
@@ -70,6 +70,7 @@ export default class App extends React.Component {
               <span> Simulator</span>
             </h2>
           </header>
+          <p className="App-hint">Click to place the ladybug on the board</p>
           <div className="App-board">
             <Table size={tableSize} cellWidth={cellWidth} cellHeight={cellHeight} onClick={this.onTableClick} />
             {
