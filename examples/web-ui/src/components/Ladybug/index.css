@@ -1,0 +1,5 @@
+.Ladybug {
+  position: absolute;
+  z-index: 9;
+  transition: left 0.2s, top 0.2s;
+}

@@ -2,3 +2,4 @@ node_modules/
 .nyc_output/
 coverage/
 examples/node-cli/lib
+examples/web-ui/src/lib
