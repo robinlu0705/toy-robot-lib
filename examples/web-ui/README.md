@@ -8,7 +8,7 @@ It demonstrates how to use the Toy Robot Lib and React to build a web page inter
 
 We created this example using [create-react-app](https://github.com/facebookincubator/create-react-app).
 
-You can view an online demo [here](). If you are interested in building something based on this example, the following instructions may give some help.
+You can view an online demo [here](https://robinlu0705.github.io/toy-robot-lib/examples/web-ui/build/). If you are interested in building something based on this example, the following instructions may give some help.
 
 ### Prerequisites
 

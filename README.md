@@ -2,6 +2,8 @@
 
 Toy Robot Lib is a JavaScript library provides the core functions of the robot described in [Toy Robot Simulator](#toy-robot-simulator).
 
+> NOTE: Some implementations of Toy Robot Simulator can be found in our [examples](#examples). Here is an online [demo](https://robinlu0705.github.io/toy-robot-lib/examples/web-ui/build/).
+
 You can use our pre-defined Robot API to generate robots with the default behaviors. Or you can create your own robots by assembling the basic-behaviors we provide.
 
 Enjoy and get creative!
@@ -12,8 +14,6 @@ Enjoy and get creative!
 dimensions 5 units x 5 units.
 * There are no other obstructions on the table surface.
 * The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.
-
-> NOTE: Implementations of Toy Robot Simulator can be found in our [examples](examples).
 
 ## Getting Started
 
@@ -116,6 +116,7 @@ const upsDriver = new UPSDriver();
 ### Examples
 
 * [node-cli](./examples/node-cli) - a command line interface implementation of Toy Robot Simulator
+* [web-ui](./examples/web-ui) - a web page ui implementation of Toy Robot Simulator
 
 ## Running The Tests
 
